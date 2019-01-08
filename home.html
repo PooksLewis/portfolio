@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Pookin Pattern Design and Illustration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/css pages/main.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/sidenav.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/gallerypage.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/aboutpage.css">
+  
+</head>
+
+
+
+<body>
+  <div class="sidenav" id="mySidenav">
+    <div class="logo"> <img src="images/logo.png" style="width:210px" > </div>
+          <a href="home.html">home</a>
+          <a href="about.html">about</a>
+          <a href="gallery.html">design</a>
+          <a href="https://www.etsy.com/uk/people/DesignByPookin" target="_blank">etsy shop</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+  </div>
+
+<div class="main">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/SLIDE1.gif"  style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/SLIDE2.gif" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/SLIDE3.gif" style="width:100%">
+  <div class="text"></div>
+</div>
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+	</div>
+	
+<div class="row1">
+  <div class="links">
+<img class="patterns" src="images/design1.jpg" alt="pattern"  class="center"> 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet gravida tortor.
+</p>
+  </div>
+  <div class="links">
+<img class="patterns" src="images/design2.jpg" alt="pattern">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet gravida tortor.
+</p>
+ 
+  </div>
+  <div class="links">
+<img class="patterns" src="images/design3.jpg" alt="pattern">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet gravida tortor.
+</p>
+ </div>
+</div>
+	
+</div>
+<br>
+
+
+
+	
+	
+	<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+function myFunction() {
+    var x = document.getElementById("mySidenav");
+    if (x.className === "sidenav") {
+        x.className += " responsive";
+    } else {
+        x.className = "sidenav";
+    }
+}
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* sidebar, logo, icons and navigation */
+.logo {text-align: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #4AB19D;
+  overflow-x: hidden;
+  padding-top: 20px;
+	font-size: 17px;
+}
+
+.sidenav a {
+  padding: 8px 0px 1px 0px;
+  text-decoration: none;
+  color: #344E5C;
+  display: block;
+	text-align: center;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .icon {
+  display: none;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+
+@media screen and (max-width:850px) {
+  .sidenav a:not(:first-child) {display: none;}
+  .sidenav a.icon {
+    float: center;
+    display: block;
+  }
+}
+@media screen and (max-width: 850px) {
+    .sidenav {
+    width: 100%;
+    height: auto;
+	padding-bottom: 8px;
+	position: relative;
+  } 
+    .sidenav a{
+		float: none;
+	}
+.main {
+    margin-left: 0px; 
+}
+
+ .sidenav.responsive {
+	 position: relative;
+	 }
+
+  .sidenav.responsive a {
+    display: block;
+  }
+  }
+  

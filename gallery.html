@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pookin Pattern Design and Illustration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/css pages/main.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/sidenav.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/gallerypagetest2.css">
+    <link rel="stylesheet" type="text/css" href="css/css pages/aboutpage.css">
+
+</head>
+
+
+<body>
+    <div class="sidenav" id="mySidenav">
+        <div class="logo"> <img src="images/logo.png" style="width:210px"> </div>
+        <a href="home.html">home</a>
+        <a href="about.html">about</a>
+        <a href="gallery.html">design</a>
+        <a href="https://www.etsy.com/uk/people/DesignByPookin" target="_blank">etsy shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
+    <div class="main">
+
+        <!-- Gallery Grid using javascript to load the images and fancybox and css to style the columns with flexbox -->
+        <div class="row">
+            <div id="gallery1" class="column">
+            </div>
+            <div id="gallery2" class="column">
+            </div>
+            <div id="gallery3" class="column">
+            </div>
+            <div id="gallery4" class="column">
+            </div>
+        </div>
+        <!-- Gallery Grid -->
+
+    </div>
+
+    <script>
+        var imgFiles = ["design1.jpg", "design10.jpg", "design11.jpg", "design12.jpg", "design13.jpg", "design14.jpg",
+            "design15.jpg", "design16.jpg", "design17.jpg", "design18.jpg", "design19.jpg",
+            "design20.jpg", "design21.jpg", "design22.jpg", "design23.jpg", "design24.jpg", "design25.jpg",
+            "design26.jpg", "design27.jpg", "design28.jpg", "design3.jpg", "design31.jpg",
+            "design4.jpg", "design5.jpg", "design6.jpg", "design7.jpg", "design9.jpg"
+        ]
+        var comments = ["this", "is", "where", "the", "comments", "live", "design", "design", "design",
+            "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design",
+            "design", "design", "design", "design", "design", "design"
+        ]
+
+        //  <7 is the amount of images that will be shown in the column ie the first 7images
+        function loadImg4(){
+            var element = document.getElementById("gallery1")
+            element.innerHTML=""
+            for (i = 0; i < 7; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+
+            var element = document.getElementById("gallery2")
+            element.innerHTML=""
+            for (i = 7; i < 14; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+
+            var element = document.getElementById("gallery3")
+            element.innerHTML=""
+            for (i = 14; i < 21; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+
+            var element = document.getElementById("gallery4")
+            element.innerHTML=""
+            for (i = 21; i < imgFiles.length; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+        }
+
+        function loadImg2(){
+            console.log("small")
+            var element = document.getElementById("gallery1")
+            element.innerHTML=""
+            for (i = 0; i < 14; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+
+            var element = document.getElementById("gallery2")
+            element.innerHTML=""
+            for (i = 14; i <  imgFiles.length; i++) {
+                var str1 = '<a href="gallery/' + imgFiles[i] + '"'
+                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
+                element.innerHTML += str1
+            }
+            var element = document.getElementById("gallery3")
+            element.innerHTML=""
+            var element = document.getElementById("gallery4")
+            element.innerHTML=""
+            
+        }
+        function loadImgs(){
+            windowsize = $(window).width()
+            if(windowsize>800){
+                loadImg4();
+            }else{
+                loadImg2();
+            }
+        }
+
+        loadImgs()
+        /// this links the function loadIms() to the event of page resizing
+        $( window ).resize(function() {
+            console.log("here2")
+            loadImgs();
+        });
+
+
+/// this is for the menu nav
+        function myFunction() {
+    var x = document.getElementById("mySidenav");
+    if (x.className === "sidenav") {
+        x.className += " responsive";
+    } else {
+        x.className = "sidenav";
+    }
+    }
+    </script>
+
+
+</body>
+
+</html>

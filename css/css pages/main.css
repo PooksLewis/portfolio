@@ -1,0 +1,23 @@
+* {box-sizing: border-box;}
+
+body {
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* main content */
+/* Same as the width of the sidenav */
+.main {
+    margin-left: 240px; 
+	max-width: 100%;
+    font-size: 28px; 
+    height: 1000px;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

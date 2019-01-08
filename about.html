@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pookin Pattern Design and Illustration</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/css pages/main.css">
+	<link rel="stylesheet" type="text/css" href="css/css pages/sidenav.css">
+	<link rel="stylesheet" type="text/css" href="css/css pages/homepage.css">
+	<link rel="stylesheet" type="text/css" href="css/css pages/gallerypage.css">
+	<link rel="stylesheet" type="text/css" href="css/css pages/aboutpage.css">
+
+</head>
+
+
+
+
+
+<body>
+    <div class="sidenav" id="mySidenav">
+	    <div class="logo"> <img src="images/logo.png" style="width:210px" > </div>
+          <a href="home.html">home</a>
+		  <a href="about.html">about</a>
+		  <a href="gallery.html">design</a>
+          <a href="https://www.etsy.com/uk/people/DesignByPookin" target="_blank">etsy shop</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<i class="fa fa-bars"></i></a>
+	</div>
+	
+<div class="main">
+    <div class="about">
+    <div class="abouttitle"><h1>About me</h1></div>
+    <div class="aboutcolumn">
+    <p>Pookin is a pretty ridiculous family nickname that has managed to stick.  I grew up on a farm in Hereford on the English/Welsh border with my 
+    3 siblings and various dogs and cats. For 7 years I have lived in Wales, which I love for all the mountains, beautiful coastline and 
+    the valleys accent.  My love of design has been with me since I was a child, even then I would love to flick through my mum’s 
+    home interiors magazines. I studied graphic design for my degree and this reflects in my work which is
+    heavily influenced by a love of colour and bold typography. I am inspired by the current trend for online shops such 
+    as Etsy and Folksy where you can discover great pieces of contemporary craft and design. Besides design my 
+    time is mainly filled with entertaining my fearless 1 year old, swimming, kayaking, eating 
+    doughnuts and endlessly browsing Pinterest! Most recently I worked for a design and manufacturing company who make
+    greetings cards, giftwrap and crackers for some of the UK's largest retailers. I am always happy to work on new projects, whatever the subject may be.  
+    Please get in touch for any more information or to discuss a project.</p>
+    </div> 
+    <div class="photocolumn">
+            <img src="images/meandgus.jpg" style="width:240px" >
+    </div>
+    </div>
+</div>
+
+
+<script>
+/// this is for the menu nav
+function myFunction() {
+var x = document.getElementById("mySidenav");
+if (x.className === "sidenav") {
+x.className += " responsive";
+} else {
+x.className = "sidenav";
+}
+}
+</script>
+
+
+</body>
+
+</html>

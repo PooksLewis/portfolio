@@ -1,0 +1,64 @@
+/* Create four equal columns that sits next to each other;
+    align-items: flex-start;
+        justify-content: flex-start;
+
+ */
+
+  .row {  
+    justify-items: start; 
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+    padding: 0 4px;
+}
+	
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 8px;
+}
+
+/* width makes the images FIT to column width */
+.column img {
+    width: 100%;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+.column img:hover {
+    opacity: 0.65;
+    filter: alpha(opacity=65); /* For IE8 and earlier */
+}
+
+
+/* Responsive layout - makes a three column-layout - doesnt work 
+@media screen and (max-width: 1200px) {
+    .column {
+        align-self: flex-start;
+        -ms-flex:33.33%;
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+} */
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+

@@ -1,0 +1,59 @@
+/*about page, blurb and photo */
+.about {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.abouttitle {
+    width: 100%;
+}
+
+h1 {
+    margin-block-start: 0.45em;
+    margin-block-end: 0.45em;
+    font-family: 'Shrikhand', cursive;
+    font-size: 35px;
+    color: #EF3D59;
+}
+
+p { 
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 17px;
+    color:DimGray;   
+    line-height: 1.7;
+}
+
+.aboutcolumn {
+    width: 60%;
+    float: left;
+}
+
+
+.photocolumn {
+    width: 40%;
+    float: left;
+}
+
+
+@media screen and (max-width: 850px) {
+    .aboutcolumn {
+    width: 100%;
+    height: auto;
+	padding-bottom: 5px;
+	position: relative;
+  } 
+  .photocolumn {
+    width:100%;
+}
+
+.photocolumn img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
+.main {
+    margin: auto; 
+    width: 100%;
+    }
+  }
