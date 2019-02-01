@@ -54,9 +54,9 @@
             "design26.jpg", "design27.jpg", "design28.jpg", "design3.jpg", "design31.jpg",
             "design4.jpg", "design5.jpg", "design6.jpg", "design7.jpg", "design9.jpg"
         ]
-        var comments = ["this", "is", "where", "the", "comments", "live", "design", "design", "design",
-            "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design",
-            "design", "design", "design", "design", "design", "design"
+        var comments = ["Birthday Wishes", "Festive Jumper", "Chalkboard Text", "Robin and foliage", "Get glammed up", "Boys birthday giftwrap design", "Handbags and Lipstick", 
+        "Ahoy there!", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", "design", 
+        "design", "design"
         ]
 
         //  <7 is the amount of images that will be shown in the column ie the first 7images
@@ -65,7 +65,7 @@
             element.innerHTML=""
             for (i = 0; i < 7; i++) {
                 var str1 = '<a href="gallery/' + imgFiles[i] + '"'
-                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] +  '>'
                 str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
                 element.innerHTML += str1
             }
@@ -74,7 +74,7 @@
             element.innerHTML=""
             for (i = 7; i < 14; i++) {
                 var str1 = '<a href="gallery/' + imgFiles[i] + '"'
-                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
                 str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
                 element.innerHTML += str1
             }
@@ -83,7 +83,7 @@
             element.innerHTML=""
             for (i = 14; i < 21; i++) {
                 var str1 = '<a href="gallery/' + imgFiles[i] + '"'
-                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
                 str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
                 element.innerHTML += str1
             }
@@ -92,7 +92,7 @@
             element.innerHTML=""
             for (i = 21; i < imgFiles.length; i++) {
                 var str1 = '<a href="gallery/' + imgFiles[i] + '"'
-                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
                 str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
                 element.innerHTML += str1
             }
@@ -113,7 +113,7 @@
             element.innerHTML=""
             for (i = 14; i <  imgFiles.length; i++) {
                 var str1 = '<a href="gallery/' + imgFiles[i] + '"'
-                str1 += 'data-fancybox="gallery" data-caption="blurb here">'
+                str1 += 'data-fancybox="gallery" data-caption=' + comments[i] + '>'
                 str1 += '<img src="gallery/' + imgFiles[i] + '"></a>'
                 element.innerHTML += str1
             }
